@@ -23,6 +23,7 @@ class Armadillo(ConanFile):
         self.copy("armadillo", dst="include", src="armadillo-7.800.0/include")
         self.copy("*.hpp", dst="include/armadillo_bits", src="armadillo-7.800.0/include/armadillo_bits")
         self.copy("*.so", dst="lib", src="")
+        self.copy("*.so.*", dst="lib", src="")
 
     def package_info(self):
         self.cpp_info.libs = ["armadillo"]
